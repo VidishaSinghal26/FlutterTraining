@@ -10,7 +10,13 @@ class BottomNavigationDemo extends StatefulWidget {
 
 class _BottomNavigationDemoState extends State<BottomNavigationDemo> {
   int _selectedItem = 0;
-  var _pages = [HomePage(), AboutPage(), ServicePage()];
+  var _pages = [
+    HomePage(),
+    AboutPage(),
+    ServicePage(),
+    AboutPage(),
+    ServicePage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +33,12 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo> {
               icon: Icon(Icons.info_rounded), label: "About"),
           BottomNavigationBarItem(
               icon: Icon(Icons.design_services), label: "Services"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.design_services), label: "Services"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.design_services), label: "Services"),
         ],
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.blue,
         fixedColor: Colors.white,
         currentIndex: _selectedItem,
